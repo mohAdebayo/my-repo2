@@ -1,0 +1,15 @@
+#Random password generator
+import random
+password = ''
+word_dict = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', '+', ',', '.', '', ';', '[', ']', '', '@', '!', '~', '#', '$', '%' ]
+ask = input('Do you want to generate a password. \n Choose y for yes or n for no: ').lower
+if ask == 'y'.lower or ask == 'yes'.lower:
+    lent = int(input('how long do u want the password in length: '))
+
+else:
+    (print('quit'))
+
+for i in range(lent):
+    password += random.choice(word_dict)
+
+print(password)
